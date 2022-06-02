@@ -1,0 +1,18 @@
+{
+  "name": "trust-me-tracking-app",
+  "version": "0.0.1",
+  "repository": "git@github.com:Radek-Wawrzyk/Trust-Me---Tracking-App.git",
+  "author": "Radosław Wawrzyk",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "start": "concurrently \"yarn workspace server start:dev\" \"yarn workspace client dev\""
+  },
+  "workspaces": [
+    "server",
+    "client"
+  ],
+  "devDependencies": {
+    "concurrently": "^7.2.1"
+  }
+}

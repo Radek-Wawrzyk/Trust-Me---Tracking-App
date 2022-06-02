@@ -1,13 +1,14 @@
 {
-  "name": "trust-me-client",
+  "name": "client",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.0.1",
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
     "preview": "vite preview"
   },
   "dependencies": {
+    "sass": "^1.52.1",
     "vue": "^3.2.25"
   },
   "devDependencies": {

@@ -20,3 +20,9 @@ export default defineComponent({
   },
 });
 </script>
+
+<style lang="scss">
+  h1 { 
+    color: $test;
+  }
+</style>

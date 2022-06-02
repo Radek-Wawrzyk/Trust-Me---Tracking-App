@@ -35,3 +35,11 @@ $ yarn
 ```bash
 $ yarn start
 ```
+
+## Adding new packages or libraries
+
+As TrustMe uses yarn workspace, then there is one common node_modules directory, therefore, to install particular node package/library, we have to specify its workspace.
+
+```bash
+$ yarn workspace WORKSPACE_NAME add PACKAGE_NAME
+```

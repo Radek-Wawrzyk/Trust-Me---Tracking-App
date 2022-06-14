@@ -1,7 +1,5 @@
 # TrustMe - Tracking-App
 
----
-
 ## Description
 
 Trust Me is an application that is being created for tracking purposes for the solution architects team at Vue Storefront. The monorepo uses Yarn workspace, which is handling local deployment flow.
@@ -35,6 +33,10 @@ $ yarn
 ```bash
 $ yarn start
 ```
+
+After `yarn start`, both application will start with following addresses:
+- Back End: localhost:3000
+- Front End: localhost:8080
 
 ## Adding new packages or libraries
 

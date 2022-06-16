@@ -55,6 +55,12 @@ export class UserService {
     return user;
   }
 
+  async findAll(): Promise<User[]> {
+    const users: User[] = await this.usersRepository.find();
+
+    return users;
+  }
+
   async updatePassword(newPasssword: string, userId: number): Promise<User> {
     let user: User = await this.findByID(userId);
     const hashedPassword: string = await bcrypt.hash(newPasssword, 12);

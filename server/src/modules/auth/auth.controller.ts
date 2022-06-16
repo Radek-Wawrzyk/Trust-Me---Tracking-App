@@ -9,7 +9,11 @@ import {
 import { AppRequest } from 'types/request';
 import { LocalAuthGuard } from './auth.local.guard';
 import { AuthService } from './auth.service';
-import { AuthRegisterDto } from './auth.dto';
+import {
+  AuthForgotPasswordDto,
+  AuthRegisterDto,
+  AuthResetPasswordDto,
+} from './auth.dto';
 import { JwtAuthGuard } from './auth.jwt.guard';
 
 @Controller('auth')
@@ -25,6 +29,16 @@ export class AuthController {
   @Post('/register')
   registerUser(@Body() registerDetails: AuthRegisterDto) {
     return this.authService.register(registerDetails);
+  }
+
+  @Post('/forgot-password')
+  sendForgotPassword(@Body() forgotPasswordDetails: AuthForgotPasswordDto) {
+    return this.authService.createForgotPasswordLink(forgotPasswordDetails);
+  }
+
+  @Post('/reset-password')
+  resetPassword(@Body() resetPasswordDetails: AuthResetPasswordDto) {
+    return this.authService.resetPassword(resetPasswordDetails);
   }
 
   @UseGuards(JwtAuthGuard)

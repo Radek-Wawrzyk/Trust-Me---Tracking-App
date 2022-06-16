@@ -18,4 +18,6 @@ export const config = () => ({
     synchronize: process.env.DB_SYNCHRONIZE,
     entities: [User],
   },
+  sendGridKey: process.env.SENDGRID_API_KEY,
+  clientURL: process.env.CLIENT_URL,
 });
